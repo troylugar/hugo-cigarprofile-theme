@@ -31,6 +31,11 @@
     {{- template "_internal/twitter_cards.html" . -}}
 
     {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
-        {{ template "_internal/google_analytics_async.html" . }}
+        {{/*
+            I'm using Google Analytics 4 here, but if you want to use Universal
+            Analytics, just comment out the next line, and uncomment the line after.
+        */}}
+        {{ partial "google-analytics-4.html" . }}
+        {{/* template "_internal/google_analytics_async.html" . */}}
     {{ end }}
 </head>
