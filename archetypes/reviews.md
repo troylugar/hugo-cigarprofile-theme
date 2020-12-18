@@ -22,7 +22,7 @@ metadata:
     vitola: Petit Corona
     length: 4.5
     ring_guage: 46
-    MSRP: $8.80 ($88.00 for a box of 10)
+    msrp: $8.80 ($88.00 for a box of 10)
     wrapper: Ecuadorian Sumatra
     binder: Nicaragua
     filler: Nicaragua
