@@ -1,0 +1,13 @@
+<table>
+    {{ range $key, $value := . }}
+        <tr>
+            <th>{{ $key | title }}</th>
+            <td>
+                {{ $filled := default (int .) 0 }}
+                {{ $empty := (sub 5 $filled) }}
+                {{ htmlUnescape (strings.Repeat $filled " &FilledSmallSquare;") }}
+                {{ htmlUnescape (strings.Repeat $empty " &EmptySmallSquare;") }}
+            </td>
+        </tr>
+    {{ end }}
+</table>

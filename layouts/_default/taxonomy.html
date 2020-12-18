@@ -1,0 +1,16 @@
+{{ define "main" }}
+  <nav aria-label="breadcrumb" class="my-4">
+    <ol class="breadcrumb bg-light p-3">
+      <li class="breadcrumb-item"><a href="/{{ .Section }}/">{{ .Section | title }}</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
+    </ol>
+  </nav>
+
+  <p class="mb-5">{{ .Params.description }}</p>
+
+  <div class="row">
+    {{ range .Data.Pages.ByPublishDate.Reverse }}
+    {{ partial "summary" . }}
+    {{ end }}
+  </div>
+{{ end }}

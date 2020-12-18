@@ -1,0 +1,27 @@
+<section id="cigar-sidebar">
+    <section id="overall-rating">
+        <div class="rating text-center">
+            <span class="text-gradient font-serif display-1">{{ .Params.overall_rating }}</span><br>
+            <span class="text-gradient font-serif font-italic">/100</span>
+        </div>
+        <img src="{{ .Params.featured_image }}" alt="cigar" class="w-100 mt-3 mb-4">
+    </section>
+
+    <section id="metadata">
+        {{ partial "cigar-metadata.html" .Params.metadata }}
+    </section>
+
+    <section id="ratings">
+        <h2 class="mt-2">
+            <span class="text-gradient">Ratings</span>
+        </h2>
+        {{ partial "cigar-rating.html" .Params.ratings }}
+    </section>
+
+    <section id="flavors">
+        <h2 class="mt-2">
+            <span class="text-gradient">Flavors</span>
+        </h2>
+        {{ partial "cigar-flavors.html" .Params.flavors }}
+    </section>
+</section>
