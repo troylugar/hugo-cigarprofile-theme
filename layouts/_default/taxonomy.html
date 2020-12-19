@@ -10,7 +10,7 @@
 
   <div class="row">
     {{ range .Data.Pages.ByPublishDate.Reverse }}
-    {{ partial "summary" . }}
+      {{ partial "summary" . }}
     {{ end }}
   </div>
 {{ end }}

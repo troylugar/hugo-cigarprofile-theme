@@ -1,23 +1,22 @@
 {{ define "main" }}
-    <section id="review" class="py-3">
-        <div class="lead text-display">Cigar Review</div>
-
-        <div class="row">
-            <div class="col-xl-9 col-lg-8">
-                <h1 class="display-4">
-                    <span class="text-gradient">{{ .Title }}</span>
-                </h1>
-                {{ partial "metadata.html" . }}
-                <div class="review-content">
-                    {{ .Content }}
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4">
-                {{ partial "cigar-sidebar.html" . }}
-            </div>
+  <section id="review" class="py-3">
+    <div class="lead text-display">Cigar Review</div>
+    <div class="row">
+      <div class="col-xl-9 col-lg-8">
+        <h1 class="display-4">
+          <span class="text-gradient">{{ .Title }}</span>
+        </h1>
+        {{ partial "metadata.html" . }}
+        <div class="review-content">
+          {{ .Content }}
         </div>
-    </section>
-    <section id="comments" class="py-3">
-        {{ template "_internal/disqus.html" . }}
-    </section>
+      </div>
+      <div class="col-xl-3 col-lg-4">
+        {{ partial "cigar-sidebar.html" . }}
+      </div>
+    </div>
+  </section>
+  <section id="comments" class="py-3">
+    {{ template "_internal/disqus.html" . }}
+  </section>
 {{ end }}

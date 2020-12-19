@@ -1,16 +1,16 @@
 <div class="row">
-    <div class="col-12 col-lg-3">
-        {{ if isset .Params "featured_image" }}
-        <a href="{{ .RelPermalink }}">
-            <img src="{{ .Params.featured_image }}" alt="featured image" class="w-100 mb-3">
-        </a>
-        {{ else }}
-        <img src="http://via.placeholder.com/400x300?text=No+image" alt="no image">
-        {{ end }}
-    </div>
-    <div class="col-12 col-lg-9">
-        <h3 class="text-display"><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-        {{ partial "metadata.html" . }}
-        <p>{{ .Summary }}</p>
-    </div>
+  <div class="col-12 col-lg-3">
+    {{ if isset .Params "featured_image" }}
+      <a href="{{ .RelPermalink }}">
+        <img src="{{ .Params.featured_image }}" alt="featured image" class="w-100 mb-3">
+      </a>
+    {{ else }}
+      <img src="http://via.placeholder.com/400x300?text=No+image" alt="no image">
+    {{ end }}
+  </div>
+  <div class="col-12 col-lg-9">
+    <h3 class="text-display"><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    {{ partial "metadata.html" . }}
+    <p>{{ .Summary }}</p>
+  </div>
 </div>

@@ -1,13 +1,15 @@
 {{ define "main" }}
-    <div class="my-3">
-        <h1 class="text-display mt-4 mb-3">
-            {{ $section := replace .Section "-" " " }}
-            {{ $section }}
-            {{ $title := replace .Title "-" " " }}
-            {{ if and (ne $title "") (ne (lower $section) (lower $title)) }} - {{ $title }}{{ end }}
-        </h1>
-        {{ range .Pages.ByPublishDate.Reverse }}
-            {{ partial "summary" . }}
-        {{ end }}
-    </div>
+  <div class="my-3">
+    <h1 class="text-display mt-4 mb-3">
+      {{ $section := replace .Section "-" " " }}
+      {{ $section }}
+      {{ $title := replace .Title "-" " " }}
+      {{ if and (ne $title "") (ne (lower $section) (lower $title)) }} - {{ $title }}{{ end }}
+    </h1>
+    <section id="list">
+      {{ range .Pages.ByPublishDate.Reverse }}
+        {{ partial "summary" . }}
+      {{ end }}
+    </section>
+  </div>
 {{ end }}

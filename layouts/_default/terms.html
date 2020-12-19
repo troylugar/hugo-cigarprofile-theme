@@ -1,20 +1,20 @@
 {{ define "main" }}
-    <section id="terms" class="my-4">
-        <h1 class="text-display">{{ .Title }}</h1>
-        {{ range .Data.Pages }}
-            <div class="row my-3">
-                <div class="col-lg-4 text-center" style="min-height: 5em;">
-                    <a href="{{ .Permalink }}">
-                        <img src="{{ .Params.featured_image }}" style="max-height: 5em;">
-                    </a>
-                </div>
-                <div class="col-lg-8">
-                    <div class="text-display lead"><a href="{{ .Permalink }}">{{ .Title }}</a></div>
-                    {{ with .Params.description }}
-                        <p>{{ . }}</p>
-                    {{ end }}
-                </div>
-            </div>
-        {{ end }}
-    </section>
+  <section id="terms" class="my-4">
+    <h1 class="text-display">{{ .Title }}</h1>
+    {{ range .Data.Pages }}
+      <div class="row my-3">
+        <div class="col-lg-4 text-center" style="min-height: 5em;">
+          <a href="{{ .Permalink }}">
+            <img src="{{ .Params.featured_image }}" style="max-height: 5em;">
+          </a>
+        </div>
+        <div class="col-lg-8">
+          <div class="text-display lead"><a href="{{ .Permalink }}">{{ .Title }}</a></div>
+          {{ with .Params.description }}
+            <p>{{ . }}</p>
+          {{ end }}
+        </div>
+      </div>
+    {{ end }}
+  </section>
 {{ end }}
