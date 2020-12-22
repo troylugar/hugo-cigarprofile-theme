@@ -33,10 +33,12 @@ h1, h2, h3, .navbar-brand, .font-serif {
 .navbar-brand,
 .rating-text,
 .text-gradient {
-    background: -webkit-gradient( linear, left top, right bottom, from(saddlebrown), to(darkgoldenrod));
-    -webkit-background-clip: text;
+    background-image: -webkit-linear-gradient(bottom right, saddlebrown, darkgoldenrod);
+    background-image: linear-gradient(bottom right, saddlebrown, darkgoldenrod);
     background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    display: inline-block;
 }
 
 .navbar-brand {
