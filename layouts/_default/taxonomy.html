@@ -6,11 +6,15 @@
     </ol>
   </nav>
 
-  <p class="mb-5">{{ .Params.description }}</p>
+  <article>
+    <header>
+      <p class="mb-5">{{ .Params.description }}</p>
+    </header>
 
-  <div class="row">
-    {{ range .Data.Pages.ByPublishDate.Reverse }}
-      {{ partial "summary" . }}
-    {{ end }}
-  </div>
+    <div class="row">
+      {{ range .Data.Pages.ByPublishDate.Reverse }}
+        {{ partial "summary" . }}
+      {{ end }}
+    </div>
+  </article>
 {{ end }}
