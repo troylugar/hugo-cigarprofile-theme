@@ -62,6 +62,10 @@ h1, h2, h3, .navbar-brand, .font-serif {
     text-transform: uppercase;
 }
 
+#cigar-sidebar th {
+    vertical-align: top;
+}
+
 .cigar-rating table {
     width: 100%;
 }
