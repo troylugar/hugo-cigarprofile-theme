@@ -1,0 +1,35 @@
+{{ define "main" }}
+  <div class="py-3">
+    <article>
+      <div class="row mb-5">
+        <div class="col-sm-3 col-4 my-auto">
+          {{ with .Params.image }}
+            <figure class="text-center">
+              <img class="w-100 rounded-circle" style="max-width: 180px" src="{{ . }}" alt="author">
+            </figure>
+          {{ else }}
+            <img src="http://via.placeholder.com/400x300?text=No+image" alt="no image">
+          {{ end }}
+        </div>
+        <div class="col-sm-9 col-8 my-auto">
+          {{ with .Params.name }}
+              <header>
+                <h1 class="display-4">
+                  <span class="text-gradient">{{ . }}</span>
+                </h1>
+              </header>
+            {{ end }}
+            {{ .Content }}
+        </div>
+      </div>
+      <section>
+        <h1>Articles</h1>
+        <div class="row">
+          {{ range .Data.Pages.ByPublishDate.Reverse }}
+            {{ partial "summary" . }}
+          {{ end }}
+        </div>
+      </section>
+    </article>
+  </div>
+{{ end }}

@@ -2,10 +2,15 @@
   <div class="my-3">
     <div class="lead text-display">Uncategorized</div>
     <article>
-      <h1 class="display-4">
-        <span class="text-gradient">{{ .Title }}</span>
-      </h1>
+      <header>
+        <h1 class="display-4">
+          <span class="text-gradient">{{ .Title }}</span>
+        </h1>
+      </header>
       {{ .Content }}
+      <footer>
+        {{ partial "authors.html" . }}
+      </footer>
     </article>
   </div>
 {{ end }}

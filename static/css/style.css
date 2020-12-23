@@ -7,7 +7,7 @@ html {
 }
 
 body {
-    font-family: "Open Sans", sans-serif !important;
+    font-family: "IBM Plex Sans", sans-serif !important;
     /* Margin bottom by footer height */
     margin-bottom: 60px;
 }
@@ -29,6 +29,10 @@ h1, h2, h3, .navbar-brand, .font-serif {
 
 /* Specific rules
 -------------------------------------------------- */
+
+.container {
+    max-width: 1200px;
+}
 
 .navbar-brand,
 .rating-text,

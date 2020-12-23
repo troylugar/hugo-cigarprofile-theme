@@ -1,24 +1,35 @@
 {{ define "main" }}
-  <div id="review" class="py-3">
-    <div class="lead text-display fw-normal">Cigar Review</div>
+<div id="review" class="py-3">
+  <div class="lead text-display fw-normal">Cigar Review</div>
+  <article id="review-body">
+    <header class="d-md-none">
+      <h1 class="display-4">
+        <span class="text-gradient">{{ .Title }}</span>
+      </h1>
+      {{ partial "metadata.html" . }}
+    </header>
     <div class="row">
-      <article id="review-body" class="col-xl-9 col-lg-8">
-        <header>
+      <div class="col-md-4 order-md-last mb-3">
+        {{ partial "cigar-sidebar.html" . }}
+      </div>
+      <div class="col-md-8 order-md-first">
+        <header class="d-none d-md-block">
           <h1 class="display-4">
             <span class="text-gradient">{{ .Title }}</span>
           </h1>
+          {{ partial "metadata.html" . }}
         </header>
-        {{ partial "metadata.html" . }}
         <div class="review-content">
           {{ .Content }}
         </div>
-      </article>
-      <div class="col-xl-3 col-lg-4">
-        {{ partial "cigar-sidebar.html" . }}
+        <footer>
+          {{ partial "authors.html" . }}
+        </footer>
       </div>
     </div>
-  </div>
-  <div id="comments" class="py-3">
-    {{ template "_internal/disqus.html" . }}
-  </div>
+  </article>
+</div>
+<div id="comments" class="py-3">
+  {{ template "_internal/disqus.html" . }}
+</div>
 {{ end }}
