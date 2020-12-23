@@ -1,0 +1,13 @@
+{{ define "main" }}
+  <div class="py-3">
+    <article>
+      <header>
+        <h1 class="display-4">
+          <span class="text-gradient">{{ .Title }}</span>
+        </h1>
+        {{ partial "metadata.html" . }}
+      </header>
+      {{ .Content }}
+    </article>
+  </div>
+{{ end }}

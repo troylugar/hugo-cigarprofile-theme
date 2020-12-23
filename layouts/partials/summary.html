@@ -1,4 +1,4 @@
-<article class="row my-4 my-lg-3">
+<article class="row py-4 py-lg-3">
   <div class="col-12 col-lg-3">
     {{ if isset .Params "featured_image" }}
       <a href="{{ .RelPermalink }}">
@@ -12,9 +12,12 @@
   </div>
   <div class="col-12 col-lg-9">
     <header>
-      <h3 class="text-display"><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      <h3 class="text-display fw-normal"><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
       {{ partial "metadata.html" . }}
     </header>
-    <p>{{ .Summary }}</p>
+    <p>
+      {{ .Summary }} 
+      <a href="{{ .RelPermalink }}" class="read-more">Read more&hellip;</a>
+    </p>
   </div>
 </article>

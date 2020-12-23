@@ -41,6 +41,17 @@ h1, h2, h3, .navbar-brand, .font-serif {
     display: inline-block;
 }
 
+.read-more,
+.read-more:visited,
+.read-more:hover {
+    margin: 0 .5em;
+    color: #000;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: .8em;
+}
+
 .navbar-brand {
     font-size: 2rem;
 }
