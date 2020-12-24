@@ -27,6 +27,12 @@ h1, h2, h3, .navbar-brand, .font-serif {
     font-family: "Playfair Display", Georgia, serif;
 }
 
+blockquote {
+    border-left: solid 2pt #DDD;
+    padding-left: 1rem;
+    margin-left: 1rem;
+}
+
 /* Specific rules
 -------------------------------------------------- */
 
